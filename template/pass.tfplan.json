@@ -1,0 +1,408 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.13.0",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "id": "/subscriptions/217a4bf1-8359-4805-9563-9db88d624e87/resourceGroups/infra-uksouth-rg",
+            "location": "westus2",
+            "name": "infra-uksouth-rg",
+            "tags": {},
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_storage_account.example",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 2,
+          "values": {
+            "account_kind": "StorageV2",
+            "account_replication_type": "LRS",
+            "account_tier": "Standard",
+            "allow_blob_public_access": false,
+            "custom_domain": [],
+            "enable_https_traffic_only": true,
+            "is_hns_enabled": false,
+            "location": "westus2",
+            "min_tls_version": "TLS1_0",
+            "name": "azureteststoragescbtest",
+            "resource_group_name": "infra-uksouth-rg",
+            "static_website": [],
+            "tags": null,
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_storage_share.example",
+          "mode": "managed",
+          "type": "azurerm_storage_share",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 2,
+          "values": {
+            "acl": [
+              {
+                "access_policy": [
+                  {
+                    "expiry": "2019-07-02T10:38:21.0000000Z",
+                    "permissions": "rwdl",
+                    "start": "2019-07-02T09:38:21.0000000Z"
+                  }
+                ],
+                "id": "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI"
+              }
+            ],
+            "name": "sharename",
+            "quota": 50,
+            "storage_account_name": "azureteststoragescbtest",
+            "timeouts": null
+          }
+        },
+        {
+          "address": "azurerm_storage_share_directory.example",
+          "mode": "managed",
+          "type": "azurerm_storage_share_directory",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "metadata": null,
+            "name": "examplescbtest",
+            "share_name": "sharename",
+            "storage_account_name": "azureteststoragescbtest",
+            "timeouts": null
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "id": "/subscriptions/217a4bf1-8359-4805-9563-9db88d624e87/resourceGroups/infra-uksouth-rg",
+          "location": "westus2",
+          "name": "infra-uksouth-rg",
+          "tags": {},
+          "timeouts": null
+        },
+        "after": {
+          "id": "/subscriptions/217a4bf1-8359-4805-9563-9db88d624e87/resourceGroups/infra-uksouth-rg",
+          "location": "westus2",
+          "name": "infra-uksouth-rg",
+          "tags": {},
+          "timeouts": null
+        },
+        "after_unknown": {}
+      }
+    },
+    {
+      "address": "azurerm_storage_account.example",
+      "mode": "managed",
+      "type": "azurerm_storage_account",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "account_kind": "StorageV2",
+          "account_replication_type": "LRS",
+          "account_tier": "Standard",
+          "allow_blob_public_access": false,
+          "custom_domain": [],
+          "enable_https_traffic_only": true,
+          "is_hns_enabled": false,
+          "location": "westus2",
+          "min_tls_version": "TLS1_0",
+          "name": "azureteststoragescbtest",
+          "resource_group_name": "infra-uksouth-rg",
+          "static_website": [],
+          "tags": null,
+          "timeouts": null
+        },
+        "after_unknown": {
+          "access_tier": true,
+          "blob_properties": true,
+          "custom_domain": [],
+          "id": true,
+          "identity": true,
+          "large_file_share_enabled": true,
+          "network_rules": true,
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_blob_endpoint": true,
+          "primary_blob_host": true,
+          "primary_connection_string": true,
+          "primary_dfs_endpoint": true,
+          "primary_dfs_host": true,
+          "primary_file_endpoint": true,
+          "primary_file_host": true,
+          "primary_location": true,
+          "primary_queue_endpoint": true,
+          "primary_queue_host": true,
+          "primary_table_endpoint": true,
+          "primary_table_host": true,
+          "primary_web_endpoint": true,
+          "primary_web_host": true,
+          "queue_properties": true,
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_blob_endpoint": true,
+          "secondary_blob_host": true,
+          "secondary_connection_string": true,
+          "secondary_dfs_endpoint": true,
+          "secondary_dfs_host": true,
+          "secondary_file_endpoint": true,
+          "secondary_file_host": true,
+          "secondary_location": true,
+          "secondary_queue_endpoint": true,
+          "secondary_queue_host": true,
+          "secondary_table_endpoint": true,
+          "secondary_table_host": true,
+          "secondary_web_endpoint": true,
+          "secondary_web_host": true,
+          "static_website": []
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_share.example",
+      "mode": "managed",
+      "type": "azurerm_storage_share",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "acl": [
+            {
+              "access_policy": [
+                {
+                  "expiry": "2019-07-02T10:38:21.0000000Z",
+                  "permissions": "rwdl",
+                  "start": "2019-07-02T09:38:21.0000000Z"
+                }
+              ],
+              "id": "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI"
+            }
+          ],
+          "name": "sharename",
+          "quota": 50,
+          "storage_account_name": "azureteststoragescbtest",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "acl": [
+            {
+              "access_policy": [
+                {}
+              ]
+            }
+          ],
+          "id": true,
+          "metadata": true,
+          "resource_manager_id": true,
+          "url": true
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_share_directory.example",
+      "mode": "managed",
+      "type": "azurerm_storage_share_directory",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "metadata": null,
+          "name": "examplescbtest",
+          "share_name": "sharename",
+          "storage_account_name": "azureteststoragescbtest",
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true
+        }
+      }
+    }
+  ],
+  "prior_state": {
+    "format_version": "0.1",
+    "terraform_version": "0.13.0",
+    "values": {
+      "root_module": {
+        "resources": [
+          {
+            "address": "azurerm_resource_group.rg",
+            "mode": "managed",
+            "type": "azurerm_resource_group",
+            "name": "rg",
+            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+            "schema_version": 0,
+            "values": {
+              "id": "/subscriptions/217a4bf1-8359-4805-9563-9db88d624e87/resourceGroups/infra-uksouth-rg",
+              "location": "westus2",
+              "name": "infra-uksouth-rg",
+              "tags": {},
+              "timeouts": null
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "azurerm": {
+        "name": "azurerm",
+        "expressions": {
+          "features": [
+            {}
+          ]
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "constant_value": "westus2"
+            },
+            "name": {
+              "constant_value": "infra-uksouth-rg"
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_storage_account.example",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "account_replication_type": {
+              "constant_value": "LRS"
+            },
+            "account_tier": {
+              "constant_value": "Standard"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "azureteststoragescbtest"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg"
+              ]
+            }
+          },
+          "schema_version": 2
+        },
+        {
+          "address": "azurerm_storage_share.example",
+          "mode": "managed",
+          "type": "azurerm_storage_share",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "acl": [
+              {
+                "access_policy": [
+                  {
+                    "expiry": {
+                      "constant_value": "2019-07-02T10:38:21.0000000Z"
+                    },
+                    "permissions": {
+                      "constant_value": "rwdl"
+                    },
+                    "start": {
+                      "constant_value": "2019-07-02T09:38:21.0000000Z"
+                    }
+                  }
+                ],
+                "id": {
+                  "constant_value": "MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI"
+                }
+              }
+            ],
+            "name": {
+              "constant_value": "sharename"
+            },
+            "quota": {
+              "constant_value": 50
+            },
+            "storage_account_name": {
+              "references": [
+                "azurerm_storage_account.example"
+              ]
+            }
+          },
+          "schema_version": 2
+        },
+        {
+          "address": "azurerm_storage_share_directory.example",
+          "mode": "managed",
+          "type": "azurerm_storage_share_directory",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "name": {
+              "constant_value": "examplescbtest"
+            },
+            "share_name": {
+              "references": [
+                "azurerm_storage_share.example"
+              ]
+            },
+            "storage_account_name": {
+              "references": [
+                "azurerm_storage_account.example"
+              ]
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}
